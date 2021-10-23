@@ -22,6 +22,7 @@ number_of_socket int (3),
 number_of_meters int(2),
 number_of_fan int(3),
 is_geyser bool,
+is_visible bool,
 number_of_entrance int(2),
 is_occupied bool,
 emp_id int(4)
