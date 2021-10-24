@@ -11,8 +11,7 @@ class Quarter_Electric_Info extends MY_Controller
 
     public function index()	{
 
-        $data = array(
-			         
+        $data = array(	         
 			//'err_code'=>0,
 			'quarter_id'=> $this->input->post('quarter_id'),
 			'meter_start_reading'=> $this->input->post('meter_start_reading'),
@@ -24,28 +23,14 @@ class Quarter_Electric_Info extends MY_Controller
 			'remark'=> $this->input->post('remark')
 	);
         
-        $this->load->library('form_validation');
+       
 		$this->drawHeader();
-		$this->form_validation->set_rules();
-
-        if ($this->form_validation->run() == FALSE && (isset ($_POST['submit'])))
-		{
-			$data['err_code']=1;
-			//$this->load->view('templates/header_assets');
-            $this->load->view('quarter_booking/quarter_electric_info_form', $data);
+		$this->load->view('templates/header_assets');
+		
+		if(isset ($_POST['submit'])){
+			$data['traffic'] = $this->quarter_electric_model->insert_quarter_electric_info($data);
 		}
-		else if($this->form_validation->run() == TRUE && isset ($_POST['submit'])  )
-		{
-			
-			 //$this->load->view('templates/header_assets');
-			 $data['traffic'] = $this->quarter_model->insert_quarter_electric_info($data);
-			$data['err_code']=0;
-            $this->load->view('quarter_booking/quarter_electric_info_form', $data);	
-		}
-		else{
-			//$this->load->view('templates/header_assets');
-            $this->load->view('quarter_booking/quarter_electric_info_form', $data);	
-		}
+		$this->load->view('quarter_booking/quarter_electric_info_form', $data);
 		$this->drawFooter();
 		
     }
