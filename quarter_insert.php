@@ -19,6 +19,7 @@ class Quarter_Insert extends MY_Controller
 			'quarter_id'=> (($date[0]).$this->input->post('building_name').$this->input->post('flat_number').$this->input->post('type_of_quarter')),
 			'is_deleted'=> FALSE,
 			'is_occupied'=>FALSE,
+			'is_visible'=>TRUE,
 			'emp_id'=>NULL,
 			'quarter_name'=> $this->input->post('name'),
 			'type_of_quarter'=> $this->input->post('type_of_quarter'),

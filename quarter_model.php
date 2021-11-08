@@ -36,7 +36,19 @@ class Quarter_model extends CI_Model
         }
     }
 
+    public function fetch_occupancy() {
 
+        $sql = "select a.* from quarter_info a;";
+
+        $query = $this->db->query($sql);
+
+        //echo $this->db->last_query(); die();
+        if ($this->db->affected_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
 	// public function get_branch_id($branch,$course)
 	// {
 		

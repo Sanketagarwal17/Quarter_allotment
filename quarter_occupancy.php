@@ -27,6 +27,9 @@ if( $traffic=="FALSE")
 
 
 <?php
+
+
+
     $row = $ui->row()->open();
     $box = $ui->box()
           ->solid()
@@ -43,29 +46,30 @@ if( $traffic=="FALSE")
             <th>Quarter id </th>
             <th>Quarter Name</th>
             <th>Occupancy Status</th>
-            <th>Quarter Detail</th>
+            <th>Visibility Status</th>
         </tr>
     </thead>
 
     
     <?php
-       $i=1;
-       $total =100;
+       $i=0;
+       $total =count($traffic);
        // foreach($guest_details as $guest) {
 	?> 
-     <?php while($total--) { ?>
+     <?php for($i=0;$i<$total;$i++) { ?>
 		<tr>
-			<td><?= $i++ ?></td>
-            <td>erferveg</td>
-            <td>rferferf</td>
-            <td>rferferf</td>
-            <td>rferferf</td>
+			<td><?= $i+1 ?></td>
+            <td><?= $traffic[$i]->quarter_id ?></td>
+            <td><?= $traffic[$i]->quarter_name ?></td>
+            <td><?= $traffic[$i]->is_occupied ?></td>
+            <td><?= $traffic[$i]->is_visible ?></td>
         </tr>
     <?php } 
     $table->close();
 		$box->close();
 		$row->close();
     ?>
+
 
 
 
