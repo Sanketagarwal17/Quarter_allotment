@@ -167,12 +167,12 @@ else if($err_code==0 && $traffic=="FALSE")
 			   ->width(12)
 			   ->options(array(
 				       $ui->option()->value('NULL')->text('---SELECT ELIGIBILITY---')->selected($eligibility_id=='NULL'),
-					   $ui->option()->value('Level - 1')->text('1')->selected($eligibility_id=='1'),
-	                   $ui->option()->value('Level - 2')->text('2')->selected($eligibility_id=='2'),
-	                   $ui->option()->value('Level - 3')->text('3')->selected($eligibility_id=='3'),
-	                   $ui->option()->value('Level - 4')->text('4')->selected($eligibility_id=='4'),
-	                   $ui->option()->value('Level - 5')->text('5')->selected($eligibility_id=='5'),
-	                   $ui->option()->value('Level - 6')->text('6')->selected($eligibility_id=='6')
+					   $ui->option()->value('1')->text('Level - 1')->selected($eligibility_id=='1'),
+	                   $ui->option()->value('2')->text('Level - 2')->selected($eligibility_id=='2'),
+	                   $ui->option()->value('3')->text('Level - 3')->selected($eligibility_id=='3'),
+	                   $ui->option()->value('4')->text('Level - 4')->selected($eligibility_id=='4'),
+	                   $ui->option()->value('5')->text('Level - 5')->selected($eligibility_id=='5'),
+	                   $ui->option()->value('6')->text('Level - 6')->selected($eligibility_id=='6')
 					   ))
 	           ->required()
 			   ->show();
