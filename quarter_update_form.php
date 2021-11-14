@@ -8,15 +8,7 @@
 		{
 		$err_msg="Quarter ID required";
 		}
-		echo '<br>';
-		echo '<br>';
 		
-		echo $traffic;
-		echo $quarter_id;
-		echo $is_geyser;
-		echo $is_visible;
-		echo $err_code;
-		echo "trfc",$traffic;
 		
 		echo '<div id="myDiv3" style="text-align:center; font-weight:bold;">
     	<p></p>
@@ -158,12 +150,7 @@ else if($err_code==0 && $traffic=="FALSE")
                                ->value(False)
                                ->show();
                         $column_vis->close();
-			   // $ui->checkbox()
-			   // ->name("is_geyser")
-			   // ->label("Is Geyser Present")
-			   // ->width(3)
-			   // ->show();
-                
+			   
 						   
 echo '<span style= "color:red;"> *</span>please alter only those fields that are need to be updated';
 $bodycol->close();

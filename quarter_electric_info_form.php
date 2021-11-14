@@ -55,7 +55,7 @@ else if($err_code==0 && $traffic=="FALSE")
 
             $form = $ui->form()
 		   ->multipart()
-		   ->action('quarter_booking/quarter_electric_info_form/index')
+		   ->action('quarter_electric_info/index')
 		   ->open();
 
             $quarter_id = $ui->input()
@@ -142,7 +142,7 @@ else if($err_code==0 && $traffic=="FALSE")
 <?php
 		$col_buttn1=$ui->row()->width(12)->open();
 		$ui->button()
-		//    ->id('booking_form')
+	
 		   ->value('Submit')
 		   ->uiType('primary')
 		   ->submit()
@@ -153,13 +153,6 @@ else if($err_code==0 && $traffic=="FALSE")
            $col_buttn1->close();
 
 		$form->close();
-		// echo var_dump($enrollment_year);
-		// echo '<br>';
-		// echo '<br>';
-		// echo print_r($academic);
-		// echo '<br>';
-		// echo '<br>';
-		//echo $academic;
-		//echo var_dump($traffic[0]).'<br>';
+		
 ?> 
 </div>

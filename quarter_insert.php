@@ -48,7 +48,7 @@ class Quarter_Insert extends MY_Controller
 		
 		$this->load->library('form_validation');
 		$this->drawHeader();
-		$this->form_validation->set_rules();
+		//$this->form_validation->set_rules();
 		$this->form_validation->set_rules('name', 'name', 'required');
 		if ($this->form_validation->run() == FALSE && (isset ($_POST['submit'])))
 		{
@@ -72,72 +72,6 @@ class Quarter_Insert extends MY_Controller
 		
 	
     }
-
-	// public function year_check($str)
-	// {
-	// 		if ($str>2021 || $str <1920)
-	// 		{
-	// 				$this->form_validation->set_message('year_check', 'The academic year should be between 1920 to 2021"');
-	// 				return FALSE;
-	// 		}
-	// 		else
-	// 		{   
-	// 				return TRUE;
-	// 		}
-	// }
-
-	// public function createcsv() {
-		
-	// 	$data_copy= array(
-			         
-	// 		'course_id'=> $this->input->post('course'),
-	// 		'enrollment_year'=>$this->input->post('academic_year'),
-	// 		'branch_id'=>$this->input->post('branch'),
-	// 		'sex'=>$this->input->post('sex'),
-	// 		'category'=>$this->input->post('category'),
-	// 		'err_code'=>0,
-	// 		'inflow_outflow'=>$this->input->post('inflow/outflow'),
-	// 		'yop'=>$this->input->post('academic_year')
-	// 	   //  'course'=>"pg"
-	// );
-	// 	// $query_string=$this->testing_model->give_data($data_copy,1);
-	// 	$this->testing_model->createcsvs($data_copy);
-	// 	// $this->load->view('templates/header_assets');
- //        //     $this->load->view('testing_form',$data_copy);
-
-
- // }
-// public function createXLS() {
-// 	create file name
-//  $fileName = 'feedbackdata-' . time() . '.xls';
-	 
-// $this->load->helper('download');
-// $this->load->library('PHPExcel');
-// $this->load->library('PHPExcel/IOFactory');
-// $object = new PHPExcel();
-
-// $object->setActiveSheetIndex(0);
-
-// $object->getProperties()->setTitle("title")
-//                  ->setDescription("description");
-// 				 $object->getActiveSheet()->setCellValue('A1', 'cell value here');
-
-// $object->getActiveSheet()->setCellValueByColumnAndRow(0, 1, 'name');
-// $object->getActiveSheet()->setCellValueByColumnAndRow(1, 1, 'age');
-// $object->getActiveSheet()->setCellValueByColumnAndRow(0, 2, 'abs');
-// $object->getActiveSheet()->setCellValueByColumnAndRow(1, 2, '20');
-// $object_writer = IOFactory::createWriter($object, 'csv');
-// 	header('Content-Type: application/vnd.ms-excel');
-// 	header('Content-Disposition: attachment;filename="feedback Data.csv"');
-	
-// 	$object_writer->save('php://output');
-	
-
-		
-
-// }
-        
-
 
 	
 

@@ -8,14 +8,8 @@
 		{
 		$err_msg="Invalid details";
 		}
-		echo '<br>';
-		echo '<br>';
 		
-		echo $quarter_name;
-		echo $is_geyser;
-		echo $err_code;
-		echo "trfc",$traffic;
-		//echo '<div id="myDiv3" style="text-align:center; font-weight:bold; font-size:25px; color:red; width:500px;height:100px;border:1px solid #000">
+		
 		echo '<div id="myDiv3" style="text-align:center; font-weight:bold;">
     	<p></p>
   		</div>';
@@ -71,10 +65,7 @@ else if($err_code==0 && $traffic=="FALSE")
 			   ->width(6)
 			   ->label('Quarter Name');
 			   
-			 //    if($err_code==1)
-				// {
-			 //   		$academic->uiType("error");
-			 //    }
+			 
 			   $academic->show();
 
 			   $ui->select()
@@ -176,12 +167,12 @@ else if($err_code==0 && $traffic=="FALSE")
 			   ->width(12)
 			   ->options(array(
 				       $ui->option()->value('NULL')->text('---SELECT ELIGIBILITY---')->selected($eligibility_id=='NULL'),
-					   $ui->option()->value('Professor')->text('Professor')->selected($eligibility_id=='Professor'),
-	                   $ui->option()->value('Associate_Professor')->text('Associate Professor')->selected($eligibility_id=='Associate_Professor'),
-	                   $ui->option()->value('Assistant_Professor')->text('Assistant Professor')->selected($eligibility_id=='Assistant_Professor'),
-	                   $ui->option()->value('Warden')->text('Warden')->selected($eligibility_id=='Warden'),
-	                   $ui->option()->value('Dean')->text('Dean')->selected($eligibility_id=='Dean'),
-	                   $ui->option()->value('Peon')->text('Peon')->selected($eligibility_id=='Peon')
+					   $ui->option()->value('Level - 1')->text('1')->selected($eligibility_id=='1'),
+	                   $ui->option()->value('Level - 2')->text('2')->selected($eligibility_id=='2'),
+	                   $ui->option()->value('Level - 3')->text('3')->selected($eligibility_id=='3'),
+	                   $ui->option()->value('Level - 4')->text('4')->selected($eligibility_id=='4'),
+	                   $ui->option()->value('Level - 5')->text('5')->selected($eligibility_id=='5'),
+	                   $ui->option()->value('Level - 6')->text('6')->selected($eligibility_id=='6')
 					   ))
 	           ->required()
 			   ->show();
@@ -288,14 +279,7 @@ $formBox->close();
            $col_buttn1->close();
 
 		$form->close();
-		// echo var_dump($enrollment_year);
-		// echo '<br>';
-		// echo '<br>';
-		// echo print_r($academic);
-		// echo '<br>';
-		// echo '<br>';
-		//echo $academic;
-		//echo var_dump($traffic[0]).'<br>';
+		
 ?> 
 </div>
 

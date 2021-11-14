@@ -7,7 +7,7 @@ class Quarter_Admin extends MY_Controller
 		parent::__construct();
 
 		  $this->load->model('quarter_model');
-		//    require_once(APPPATH.'libraries/PHPExcel/IOFactory.php');
+		
 	}
 
 	public $data_copy;

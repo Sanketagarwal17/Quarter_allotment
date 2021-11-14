@@ -6,7 +6,7 @@ class Quarter_Electric_Info extends MY_Controller
 	{
 		parent::__construct();
         $this->load->model('quarter_electric_model');
-		//    require_once(APPPATH.'libraries/PHPExcel/IOFactory.php');
+		
 	}
 
     public function index()	{
@@ -25,12 +25,12 @@ class Quarter_Electric_Info extends MY_Controller
         
        
 		$this->drawHeader();
-		$this->load->view('templates/header_assets');
+		// $this->load->view('templates/header_assets');
 		
 		if(isset ($_POST['submit'])){
 			$data['traffic'] = $this->quarter_electric_model->insert_quarter_electric_info($data);
 		}
-		$this->load->view('quarter_booking/quarter_electric_info_form', $data);
+		$this->load->view('quarter_electric_info_form', $data);
 		$this->drawFooter();
 		
     }

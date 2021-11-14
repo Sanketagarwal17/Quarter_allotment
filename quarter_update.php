@@ -16,31 +16,7 @@ class Quarter_Update extends MY_Controller
 		$data = array(
 			         
 			'quarter_id'=> $this->input->post('quarter_id')
-			// 'is_deleted'=> FALSE,
-			// 'is_occupied'=>FALSE,
-			// 'is_visible'=>TRUE,
-			// 'emp_id'=>NULL,
-			// 'quarter_name'=> $this->input->post('name'),
-			// 'type_of_quarter'=> $this->input->post('type_of_quarter'),
-			// 'building_name'=> $this->input->post('building_name'),
-			// 'flat_number'=> $this->input->post('flat_number'),
-			// 'date_of_opening'=> $this->input->post('date_of_opening'),
-			// 'address'=> $this->input->post('address'),
-			// 'carpet_area'=> $this->input->post('carpet_area'),
-			// 'number_of_rooms'=> $this->input->post('number_of_rooms'),
-			// 'number_of_people'=> $this->input->post('number_of_people'),
-			// 'number_of_washroom'=> $this->input->post('number_of_washrooms'),
-			// 'eligibility_requirement'=> $this->input->post('eligibility_requirement'),
-			// 'number_of_fan'=> $this->input->post('number_of_fan'),
-			// 'number_of_entrance'=> $this->input->post('number_of_entrance'),
-			// 'number_of_socket'=> $this->input->post('number_of_socket'),
-			// 'number_of_meters'=> $this->input->post('number_of_meters'),
-			// 'license_fee'=>$this->input->post('license_fee'),
-			// 'reserved_for'=>$this->input->post('reserved_for'),
-			// 'additional_info'=>$this->input->post('additional_info'),
-			// 'is_balcony'=>($this->input->post('is_balcony')==TRUE),
-			// 'is_parking'=>($this->input->post('is_parking')==TRUE),
-			// 'is_geyser'=>($this->input->post('is_geyser')==TRUE)
+			
 	);
 
 		
