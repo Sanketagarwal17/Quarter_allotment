@@ -6,7 +6,7 @@ class Quarter_Update extends MY_Controller
 	{
 		parent::__construct();
 
-		  $this->load->model('quarter_model');
+		  $this->load->model('quarter_allotment/quarter_model');
 		//    require_once(APPPATH.'libraries/PHPExcel/IOFactory.php');
 	}
 
@@ -29,12 +29,12 @@ class Quarter_Update extends MY_Controller
 			if((isset ($_POST['Update'])))
 			{
 				$data['err_code']=1;
-            	$this->load->view('quarter_update_form',$data);	
+            	$this->load->view('quarter_allotment/quarter_update_form',$data);	
 			}
 			else if((isset ($_POST['Delete'])))
 			{
 				$data['err_code']=1;
-            	$this->load->view('quarter_update_form',$data);	
+            	$this->load->view('quarter_allotment/quarter_update_form',$data);	
 			}
 			
 		}
@@ -56,7 +56,7 @@ class Quarter_Update extends MY_Controller
 				if($data['traffic']=="TRUE")
 					$data['traffic'] = "Updation";
 				$data['err_code']=0;
-				$this->load->view('quarter_update_form',$data);	
+				$this->load->view('quarter_allotment/quarter_update_form',$data);	
 			}
 			else if((isset ($_POST['Delete'])))
 			{
@@ -64,13 +64,13 @@ class Quarter_Update extends MY_Controller
 				if($data['traffic']=="TRUE")
 					$data['traffic'] = "Deletion";
 				$data['err_code']=0;
-				$this->load->view('quarter_update_form',$data);	
+				$this->load->view('quarter_allotment/quarter_update_form',$data);	
 			}
 			
 			
 		}
 		else{
-            $this->load->view('quarter_update_form',$data);
+            $this->load->view('quarter_allotment/quarter_update_form',$data);
 		}
 		$this->drawFooter();
 		

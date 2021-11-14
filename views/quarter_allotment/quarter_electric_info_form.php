@@ -55,7 +55,7 @@ else if($err_code==0 && $traffic=="FALSE")
 
             $form = $ui->form()
 		   ->multipart()
-		   ->action('quarter_electric_info/index')
+		   ->action('quarter_allotment/quarter_electric_info/index')
 		   ->open();
 
             $quarter_id = $ui->input()

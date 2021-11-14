@@ -52,7 +52,7 @@ else if($err_code==0 && $traffic=="FALSE")
 
 		$form = $ui->form()
 		   ->multipart()
-		   ->action('quarter_update/index')
+		   ->action('quarter_allotment/quarter_update/index')
 		   ->open();
 		   	    
 		   	$column_id = $ui->col()

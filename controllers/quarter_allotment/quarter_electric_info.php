@@ -5,7 +5,7 @@ class Quarter_Electric_Info extends MY_Controller
 	function __construct()
 	{
 		parent::__construct();
-        $this->load->model('quarter_electric_model');
+        $this->load->model('quarter_allotment/quarter_electric_model');
 		
 	}
 
@@ -30,7 +30,7 @@ class Quarter_Electric_Info extends MY_Controller
 		if(isset ($_POST['submit'])){
 			$data['traffic'] = $this->quarter_electric_model->insert_quarter_electric_info($data);
 		}
-		$this->load->view('quarter_electric_info_form', $data);
+		$this->load->view('quarter_allotment/quarter_electric_info_form', $data);
 		$this->drawFooter();
 		
     }

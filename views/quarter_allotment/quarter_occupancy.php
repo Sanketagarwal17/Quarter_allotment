@@ -10,9 +10,9 @@
 <h3 style="font-weight:bold">Quarter Information</h3>
 </div>
 <div style= 'text-align:center'>
-<a href="<?php echo site_url('quarter_insert'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Insert New Quarter</a>
-<a href="<?php echo site_url('quarter_update'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Update/Delete Quarter</a>
-<a href="<?php echo site_url('quarter_electric_info'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Quarter Electric Info</a>
+<a href="<?php echo site_url('quarter_allotment/quarter_insert'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Insert New Quarter</a>
+<a href="<?php echo site_url('quarter_allotment/quarter_update'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Update/Delete Quarter</a>
+<a href="<?php echo site_url('quarter_allotment/quarter_electric_info'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Quarter Electric Info</a>
 <a href="<?php echo site_url('login'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" style = 'margin-right:40px'> Allotment Requests</a>
 </div>
 

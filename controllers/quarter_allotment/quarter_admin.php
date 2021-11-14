@@ -6,7 +6,7 @@ class Quarter_Admin extends MY_Controller
 	{
 		parent::__construct();
 
-		  $this->load->model('quarter_model');
+		  $this->load->model('quarter_allotment/quarter_model');
 		
 	}
 
@@ -16,7 +16,7 @@ class Quarter_Admin extends MY_Controller
 		$this->drawHeader();
 		
 			$data['traffic'] = $this->quarter_model->fetch_occupancy();
-            $this->load->view('quarter_occupancy',$data);
+            $this->load->view('quarter_allotment/quarter_occupancy',$data);
 		
 		$this->drawFooter();
 		
